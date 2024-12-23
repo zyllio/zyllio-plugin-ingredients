@@ -24,7 +24,7 @@
 
       const data = JSON.parse(json)
 
-      console.log("jsonObject ", jsonObject);
+      console.log("jsonObject ", data);
 
 
       const result = data.ingredients.map(ingredient => {
