@@ -27,13 +27,16 @@
       console.log("jsonObject ", data);
 
       const result = data.ingredients.map(ingredient => {
-
+        
         const problems = ingredient.problems.length > 0 ? `(${ingredient.problems.join(", ")})` : ''
-       
+        
         return `${ingredient.name} ${problems}`.trim()
-
+        
       }).join('\n')
+      
+      console.log("result ", result);
 
+      
       return result
     }
   }
