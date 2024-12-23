@@ -27,15 +27,11 @@
 
       const json = await zySdk.services.dictionary.getValue(jsonProperty.value)
 
-      console.log("json ", json);
-
       if (!json) {
         return ''
       }
 
       const data = JSON.parse(json)
-
-      console.log("jsonObject ", data);
 
       const result = data.ingredients.map(ingredient => {
 
@@ -46,8 +42,6 @@
         return `${ingredient.name} ${problems}`.trim()
 
       }).join('\n')
-
-      console.log("result: ", result);
 
       return result
     }
