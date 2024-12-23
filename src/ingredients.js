@@ -22,7 +22,9 @@
         return ''
       }
 
-      
+      const jsonObject = JSON.parse(json)
+ console.log("jsonObject ", jsonObject);
+
 
 
 
