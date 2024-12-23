@@ -9,7 +9,7 @@
 `;
 
   const Translations = new Map([
-    ["is_pregnant_or_breastfeeding", "enceinte ou allaitante"]
+    ["is_pregnant_or_breastfeeding", "enceinte ou allaitante"],
     ["dehydrated_skin", "peau déshydratée"],
     ["sensitive_skin", "peau sensible"],
     ["pimples", "boutons"],
