@@ -8,17 +8,30 @@
     </svg> 
 `;
 
-class IngredientFunction {
+  class IngredientFunction {
 
-  async execute(properties) {
+    async execute([jsonProperty]) {
 
-    console.log('execute: GetRandomMemeAction')
+      console.log('execute: GetRandomMemeAction')
 
-    return 'ingrediants'
+      const json = await zySdk.services.dictionary.getValue(jsonProperty.value)
+
+      console.log("json ", json);
+
+      if (!json) {
+        return ''
+      }
+
+      
+
+
+
+
+      return 'ingrediants'
+    }
   }
-}
 
-const zyIngredientFunction = new IngredientFunction()
+  const zyIngredientFunction = new IngredientFunction()
 
 
   const IngredientMetadata = {
