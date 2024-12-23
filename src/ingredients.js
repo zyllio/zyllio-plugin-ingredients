@@ -8,6 +8,16 @@
     </svg> 
 `;
 
+  const Translations = new Map([
+    ["dehydrated_skin", "peau déshydratée"],
+    ["sensitive_skin", "peau sensible"],
+    ["pimples", "boutons"],
+    ["sebum_pores_blackheads", "sébum, pores, points noirs"],
+    ["scars_spots", "cicatrices, taches"],
+    ["wrinkles_firmness", "rides, fermeté"],
+    ["redness", "rougeurs"]
+  ]);
+
   class IngredientFunction {
 
     async execute([jsonProperty]) {
@@ -27,13 +37,15 @@
       console.log("jsonObject ", data);
 
       const result = data.ingredients.map(ingredient => {
-        
-        const problems = ingredient.problems.length > 0 ? `(${ingredient.problems.join(", ")})` : ''
-        
+
+        const translatedProblems = ingredient.problems.map(p => Translations.get(p) || p)
+
+        const problems = ingredient.problems.length > 0 ? `(${translatedProblems.join(", ")})` : ''
+
         return `${ingredient.name} ${problems}`.trim()
-        
+
       }).join('\n')
-      
+
       console.log("result: ", result);
 
 
