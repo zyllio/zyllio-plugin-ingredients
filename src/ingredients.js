@@ -22,14 +22,20 @@
         return ''
       }
 
-      const jsonObject = JSON.parse(json)
- console.log("jsonObject ", jsonObject);
+      const data = JSON.parse(json)
+
+      console.log("jsonObject ", jsonObject);
 
 
+      const result = data.ingredients.map(ingredient => {
 
+        const problems = ingredient.problems.join(', ')
 
+        return `${ingredient.name} (${problems})`
 
-      return 'ingrediants'
+      }).join('\n')
+
+      return result
     }
   }
 
