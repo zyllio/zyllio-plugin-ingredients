@@ -39,7 +39,9 @@
 
         const problems = ingredient.problems.length > 0 ? `(${translatedProblems.join(", ")})` : ''
 
-        return `${ingredient.name} ${problems}`.trim()
+        const commercialName = (ingredient.commercial_name) ? `, ${ingredient.commercial_name}`: ''
+
+        return `${ingredient.name}${commercialName} ${problems}`.trim()
 
       }).join('\n')
 
