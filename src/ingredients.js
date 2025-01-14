@@ -16,7 +16,11 @@
     ["sebum_pores_blackheads", "sébum, pores, points noirs"],
     ["scars_spots", "cicatrices, taches"],
     ["wrinkles_firmness", "rides, fermeté"],
-    ["redness", "rougeurs"]
+    ["redness", "rougeurs"],
+    ["dry_skin", "peau sèche"],
+    ["normal_skin", "peau normale"],
+    ["mixed_skin", "peau mixte"],
+    ["oily_skin", "peau grasse"]
   ]);
 
   class IngredientFunction {
